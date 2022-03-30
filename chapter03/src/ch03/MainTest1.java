@@ -30,9 +30,6 @@ public class MainTest1 {
 		for (int i = 0; i < remoteControllers.length; i++) {
 			remoteControllers[i].turnOff();
 		}
-		
-		
-		
 
 	}
 
