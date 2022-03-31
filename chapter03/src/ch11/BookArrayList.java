@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class BookArrayList implements BookService {
 
 	private ArrayList<Book> books = new ArrayList<Book>();
-	
+
 	/**
-	 * Book 객체를 ArrayList 자료 구조에 저장하기 
+	 * Book 객체를 ArrayList 자료 구조에 저장하기
 	 */
 	@Override
 	public void addBook(Book book) {
@@ -16,24 +16,21 @@ public class BookArrayList implements BookService {
 		showAllBook();
 	}
 
-	
 	/**
-	 * 책에 타이틀로 책 존재 여부 확인 
-	 * 있다면 매개 변수로 넘어 오는 Book 객체를 
-	 * 수정한다. 
+	 * 책에 타이틀로 책 존재 여부 확인 있다면 매개 변수로 넘어 오는 Book 객체를 수정한다.
 	 */
 	@Override
 	public void updateBook(String title, Book book) {
 		System.out.println("수정합니다.");
-		// 책 타이틀로 인덱스 번호를 찾아야 한다. 
-		int bookIndex = -1; 
+		// 책 타이틀로 인덱스 번호를 찾아야 한다.
+		int bookIndex = -1;
 		for (int i = 0; i < books.size(); i++) {
-			if(books.get(i).getTitle().equals(title)) {
+			if (books.get(i).getTitle().equals(title)) {
 				// 책이 존재
-				bookIndex = i; 
+				bookIndex = i;
 			}
 		}
-		if(bookIndex == -1) {
+		if (bookIndex == -1) {
 			System.out.println(title + " 이름에 책이 존재하지 않습니다");
 		} else {
 			books.set(bookIndex, book);
@@ -42,19 +39,19 @@ public class BookArrayList implements BookService {
 	}
 
 	/**
-	 *  책 타이틀로 ArrayList 에 객체를 삭제 합니다.
+	 * 책 타이틀로 ArrayList 에 객체를 삭제 합니다.
 	 */
 	@Override
 	public void deleteBook(String title) {
 		System.out.println("삭제합니다.");
-		boolean deleteOk = false; 
+		boolean deleteOk = false;
 		for (int i = 0; i < books.size(); i++) {
-			if(books.get(i).getTitle().equals(title)) {
+			if (books.get(i).getTitle().equals(title)) {
 				books.remove(i);
-				deleteOk = true; 
+				deleteOk = true;
 			}
 		}
-		if(deleteOk) {
+		if (deleteOk) {
 			System.out.println(title + " 책을 삭제 하였습니다.");
 		} else {
 			System.out.println(title + " 책이 존재 하지 않습니다.");
@@ -69,16 +66,16 @@ public class BookArrayList implements BookService {
 	public void selectedByTitleBook(String title) {
 		System.out.println("조회 합니다.");
 		for (int i = 0; i < books.size(); i++) {
-			if(books.get(i).getTitle().equals(title)) {
+			if (books.get(i).getTitle().equals(title)) {
 				System.out.println(books.get(i));
-				return; 
+				return;
 			}
 		}
 		System.out.println(title + " 제목으로 책을 찾을 수 없습니다.");
 	}
 
 	/**
-	 * 모든 데이틀 출력 
+	 * 모든 데이틀 출력
 	 */
 	@Override
 	public void showAllBook() {
