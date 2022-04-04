@@ -2,7 +2,7 @@ package ch11;
 
 import java.util.Scanner;
 
-public class MainTest {
+public class BookSaveSystem {
 
 	public static void main(String[] args) {
 
@@ -11,20 +11,13 @@ public class MainTest {
 		BookService bookArrayList = new BookArrayList();
 		Scanner scanner = new Scanner(System.in);
 		String selectedMenu = "";
+	
+		String pwd = "1234";
+		boolean isOk = false; 
 		
-		// 샘플 데이터 생성 
-		Book book1 = new Book(1, "홍길동전1", "홍가1");
-		Book book2 = new Book(2, "홍길동전2", "홍가2");
-		Book book3 = new Book(3, "홍길동전3", "홍가3");
-		Book book4 = new Book(4, "홍길동전4", "홍가4");
-		Book book5 = new Book(5, "홍길동전5", "홍가5");
-		bookArrayList.addBook(book1);
-		bookArrayList.addBook(book2);
-		bookArrayList.addBook(book3);
-		bookArrayList.addBook(book4);
-		bookArrayList.addBook(book5);
 		
 		do {
+			
 			System.out.println("----------------------------------------------------------------------------");
 			System.out.println("1. 책 생성 2. 책 조회 3. 책 삭제 4. 책 전체 조회 5. 책 수정 0. 프로그램 종료");
 			System.out.println("----------------------------------------------------------------------------");
