@@ -6,8 +6,11 @@ import javax.swing.JTable;
 
 public class MyJFrameEX extends JFrame {
 	
-	String[][] d = { { "Sam", "29", "Twinkle House" }, { "Anna Sam", "27", "Happy Villa" },
-			{ "Iza Norah", "4", "HAppy House" } };
+	String[][] d = { 
+			{ "Sam", "29", "Twinkle House" },
+			{ "Anna Sam", "27", "Happy Villa" },
+			{ "Iza Norah", "4", "HAppy House" } 
+		};
 
 	String[] cn = { "name", "Age", "House Address" };
 
