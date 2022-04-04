@@ -64,9 +64,11 @@ public class MyImageFrame2 extends JFrame {
 		new MyImageFrame2();
 		
 		
-		
 	} // end of main 
 	
+	public void addEventListener() {
+		System.out.println("브랜치를 만들었습니다.");
+	}
 	
 } // end of outer class 
 
