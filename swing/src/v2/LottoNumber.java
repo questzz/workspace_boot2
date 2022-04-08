@@ -6,17 +6,17 @@ import java.util.Random;
 public class LottoNumber {
 
 	static final int LOTTO_NUM_SIZE = 6;
-	
+
 	public int[] getLottoNumber() {
-		
+
 		int[] numbers = new int[LOTTO_NUM_SIZE];
-		Random random = new Random(); 
-		
-		for(int i = 0; i < numbers.length; i++) {
-			numbers[i] = random.nextInt(45) + 1; 
-			
-			for(int j = 0; j < i; j++) {
-				if(numbers[i] == numbers[j]) {
+		Random random = new Random();
+
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = random.nextInt(45) + 1;
+
+			for (int j = 0; j < i; j++) {
+				if (numbers[i] == numbers[j]) {
 					i = i - 1;
 					break;
 				}
@@ -34,9 +34,3 @@ public class LottoNumber {
 //		}
 //	}
 }
-
-
-
-
-
-
