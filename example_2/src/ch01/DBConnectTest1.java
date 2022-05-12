@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MainTest1 {
+public class DBConnectTest1 {
 	
 	private Connection conn; // DB 커넥션 연결 객체 
 	private static final String USERNAME = "root";
@@ -16,7 +16,7 @@ public class MainTest1 {
 	Statement stmt = null;
 	ResultSet rs = null;	
 	
-	public MainTest1() {
+	public DBConnectTest1() {
 		
 		// The server time zone value 
 		try {
@@ -47,6 +47,6 @@ public class MainTest1 {
 	}
 	
 	public static void main(String[] args) {
-		new MainTest1(); 
+		new DBConnectTest1(); 
 	}
 }

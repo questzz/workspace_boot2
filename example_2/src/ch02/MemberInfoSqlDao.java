@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class MemberInfoSqlDao implements IMemberInfoDao {
 
-	/** DBHelper를 통한 DB 접속 처리 */
+	/** dbClient 를 통한 DB 접속 처리 */
 	private static final String TABLE_NAME = "memberTBL";
 	private DBClient dbClient;
 	private Connection conn;
